@@ -1,0 +1,25 @@
+# Recommended dimensions to export assets
+
+# Website Favicon
+16px x 16px
+32px x 32px
+48px x 48px
+144px x 144px
+192px x 192px
+512px x 512px
+
+# Instagram
+Profile photo (circular):       110px x 110px
+
+# Facebook
+Profile photo (square):         170px x 170px
+Cover photo:                    820px x 312px
+
+# YouTube
+Profile photo (circular):       800px x 800px
+Thumbnail photo:                1280px x 720px
+Cover photo:                    2560px x 1440px
+
+# Twitter
+Profile photo (circular):       800px x 800px
+Cover photo:                    1500px x 1500px
