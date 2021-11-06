@@ -1,0 +1,58 @@
+<svg viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+    <!-- Rectangles -->
+    <g fill="#ff8df8">
+        <!-- Center Rectangle -->
+        <rect width="6" height="42" x="29" y="2" ry="3">
+            <animate attributeName="height" values="0;42" dur="0.5s"/>
+            <animate attributeName="y" values="20.5;2" dur="0.5s"/>
+        </rect>
+
+        <!-- Left Rectangle-->
+        <rect width="6" height="0" x="0" y="2" ry="3">
+            <animate attributeName="height" values="0;58" begin="1.2s" dur="0.5s" fill="freeze" />
+            <animate attributeName="y" values="27.5;2" begin="1.2s" dur="0.5s" fill="freeze" />
+        </rect>
+
+        <!-- Right Rectangle -->
+        <rect width="6" height="0" x="58" y="17.5" ry="3">
+            <animate attributeName="height" values="0;34" begin="1.2s" dur="0.5s" fill="freeze" />
+        </rect>
+    </g>
+
+    <!-- Paths -->
+    <g stroke="#ff8df8" fill-opacity="0" stroke-width="6" stroke-linecap="round">
+
+        <!-- Right Arc -->
+        <path id="path1" d="M 61 19.5 A 11.5 11.5 0 0 0 32 19.5" pathLength="10" />
+
+        <!-- Left Arc -->
+        <path id="path2" d="M 3 27.5 A 11.5 11.5 0 0 0 32 27.5" pathLength="10" />
+
+        <!-- 'n' tail -->
+        <path id="path3" d="M 51.5 59 A 9.5 9.5 0 0 0 61 49.5" pathLength="10" />
+
+        <style>
+            #path1, #path2, #path3 {
+                stroke-dasharray: 10;
+                stroke-dashoffset: -10;
+                opacity: 0;
+                animation: dash 1s linear forwards;
+                animation-delay: 0.2s;
+            }
+            #path3 {
+                animation-duration: .5s;
+                animation-delay: 1.7s;
+            }
+            @keyframes dash {
+                from {
+                    opacity: 1;
+                }
+                to {
+                    opacity: 1;
+                    stroke-dashoffset: 0;
+                }
+            }
+        </style>
+    </g>
+</svg>
