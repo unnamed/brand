@@ -1,1 +1,2 @@
 Pink: #ff8df8
+White: #ffffff
