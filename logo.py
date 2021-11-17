@@ -22,6 +22,7 @@
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #  SOFTWARE.
 #
+from cairosvg import svg2png
 
 #
 # Small script to generate our logo in Scalable Vector Graphics format
@@ -37,7 +38,7 @@ def parse_args():
     """
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('--output', '-o', help='Set the output filename', type=str, default='logo.svg')
+    parser.add_argument('--variant', '-v', help='Set logo variant name', type=str, default='default')
     parser.add_argument('--stroke', '-s', help='Set the stroke width', type=int, default=6)
     parser.add_argument('--fill', '-f', help='Set the logo fill color', type=str, default='#ff8df8')
     parser.add_argument('--padding', '-p', help='Set the logo padding', type=int, default=0)
@@ -48,7 +49,7 @@ def parse_args():
 # Parse arguments
 args = parse_args()
 
-# Initialize variables
+variant = args.variant
 # '64' is the base size for the logo,
 # we add the padding to it
 off = args.padding or 0
@@ -94,5 +95,19 @@ svg = \
     f'  </g>\n' \
     f'</svg>'
 
-with open(args.output, 'w') as f:
+# Write SVG file
+with open(f'svg/logo.svg', 'w') as f:
     f.write(svg)
+
+# Write PNG files
+with open('dimensions/square_logo.txt') as f:
+    for line in f.readlines():
+        if line.startswith('#'):
+            continue
+        size = int(line)
+        svg2png(
+            bytestring=svg,
+            write_to=f'png/logo-{variant}-{line}x{line}.png',
+            parent_width=size,
+            parent_height=size
+        )

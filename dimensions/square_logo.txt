@@ -1,0 +1,7 @@
+# Dimensions to export a square logo (in pixels)
+16
+32
+48
+144
+192
+512
