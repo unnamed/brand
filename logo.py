@@ -100,7 +100,7 @@ with open(f'svg/logo.svg', 'w') as f:
     f.write(svg)
 
 # Write PNG files
-with open('dimensions/square_logo.txt') as f:
+with open('src/dimensions_square_logo.txt') as f:
     for line in f.readlines():
         if line.startswith('#'):
             continue

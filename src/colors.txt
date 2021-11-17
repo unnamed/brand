@@ -1,0 +1,10 @@
+# Unnamed Team branding colors
+#   <name> : <color> : <foreground color>
+
+# Main colors
+Pink: #ff8df8 : #ffffff
+White: #ffffff : #252525
+
+# Secondary colors
+Dark Pink: #1c0f1b : #ffffff
+Gray: #252525 : #ffffff
