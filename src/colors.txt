@@ -3,6 +3,7 @@
 
 # Main colors
 Pink: #ff8df8 : #ffffff
+Pink 2: #ef64e5 : #ffffff
 White: #ffffff : #252525
 
 # Secondary colors
