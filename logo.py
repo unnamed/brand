@@ -104,10 +104,10 @@ with open('src/dimensions_square_logo.txt') as f:
     for line in f.readlines():
         if line.startswith('#'):
             continue
-        size = int(line)
+        size = int(line.strip())
         svg2png(
             bytestring=svg,
-            write_to=f'png/logo-{variant}-{line}x{line}.png',
+            write_to=f'png/logo-{variant}-{size}x{size}.png',
             parent_width=size,
             parent_height=size
         )
